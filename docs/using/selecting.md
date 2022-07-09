@@ -188,7 +188,7 @@ communities.
 
 [Source on GitHub](https://github.com/jupyter/docker-stacks/tree/main/snowpark-notebook) |
 [Dockerfile commit history](https://github.com/jupyter/docker-stacks/commits/main/snowpark-notebook/Dockerfile) |
-[Docker Hub image tags](https://hub.docker.com/r/jupyter/snowpark-notebook/tags/)
+[Docker Hub image tags](https://hub.docker.com/r/john77eipe/snowpark-notebook/tags/)
 
 `jupyter/snowpark-notebook` includes snowpark library and it's dependencies for analytics on snowflake.
 

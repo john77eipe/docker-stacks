@@ -201,7 +201,7 @@ The following diagram depicts the build dependency tree of the core images. (i.e
 Any given image inherits the complete content of all ancestor images pointing to it.
 
 [![Image inheritance
-diagram](../images/inherit.svg)](http://interactive.blockdiag.com/?compression=deflate&src=eJyFzTEPgjAQhuHdX9Gws5sQjGzujsaYKxzmQrlr2msMGv-71K0srO_3XGud9NNA8DSfgzESCFlBSdi0xkvQAKTNugw4QnL6GIU10hvX-Zh7Z24OLLq2SjaxpvP10lX35vCf6pOxELFmUbQiUz4oQhYzMc3gCrRt2cWe_FKosmSjyFHC6OS1AwdQWCtyj7sfh523_BI9hKlQ25YdOFdv5fcH0kiEMA)
+diagram](../images/inherit.svg)](http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJyFzTEPgjAQBeDdX9Gws5sQjGzujsaYKxymodw17TUEjf9d6lYcur73vTttuZ8GA0_1PijF3iAJiGFSrXLsxYORZmsGHCFaeYxMEswLt_qY8k7dLGi0bRV1JInn66Wr7s3hV9UnpSFgTSyomac0yIIkZkNmBpuhfZZc6I1bM5UnyQhSYD9aXgpwAIEtReqx-NgXbrk1OPBTQQXi5Y_tpwmCtfX-4OcLCnqSGQ)
 
 ### Builds
 

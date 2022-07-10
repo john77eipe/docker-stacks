@@ -184,15 +184,41 @@ communities.
   [ggplot2](https://ggplot2.tidyverse.org)
   packages
 
-### jupyter/snowpark-notebook
+### john77eipe/snowpark-notebook
 
 [Source on GitHub](https://github.com/jupyter/docker-stacks/tree/main/snowpark-notebook) |
 [Dockerfile commit history](https://github.com/jupyter/docker-stacks/commits/main/snowpark-notebook/Dockerfile) |
 [Docker Hub image tags](https://hub.docker.com/r/john77eipe/snowpark-notebook/tags/)
 
-`jupyter/snowpark-notebook` includes snowpark library and it's dependencies for analytics on snowflake.
+- `john77eipe/snowpark-notebook` includes snowpark library and it's dependencies for analytics on snowflake.
+- Everything in `jupyter/scipy-notebook:python-3.8.8` and its ancestor images
+- [snowflake-snowpark-python](https://pypi.org/project/snowflake-snowpark-python/) Snowflake Snowpark Python API
 
-- Everything in `jupyter/scipy-notebook` and its ancestor images
+### john77eipe/streamlit-notebook
+
+[Source on GitHub](https://github.com/jupyter/docker-stacks/tree/main/streamlit-notebook) |
+[Dockerfile commit history](https://github.com/jupyter/docker-stacks/commits/main/streamlit-notebook/Dockerfile) |
+[Docker Hub image tags](https://hub.docker.com/r/john77eipe/streamlit-notebook/tags/)
+
+- Everything in `john77eipe/base-notebook` and its ancestor images + scipy libraries (most of what is listed in `jupyter/scipy-notebook`).
+- [streamlit](https://pypi.org/project/snowflake-snowpark-python/) Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science.
+
+### john77eipe/streamlit-snowpark-notebook
+
+[Source on GitHub](https://github.com/john77eipe/docker-stacks/tree/main/streamlit-snowpark-notebook) |
+[Dockerfile commit history](https://github.com/john77eipe/docker-stacks/commits/main/streamlit-snowpark-notebook/Dockerfile) |
+[Docker Hub image tags](https://hub.docker.com/r/john77eipe/streamlit-snowpark-notebook/tags/)
+
+- Everything in `jupyter/base-notebook:python-3.8.8` and its ancestor images + scipy libraries (most of what is listed in `jupyter/scipy-notebook`).
+- [streamlit](https://pypi.org/project/snowflake-snowpark-python/) Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science.
+
+### john77eipe/pyspark-snowpark-notebook
+
+[Source on GitHub](https://github.com/john77eipe/docker-stacks/tree/main/pyspark-snowpark-notebook) |
+[Dockerfile commit history](https://github.com/john77eipe/docker-stacks/commits/main/pyspark-snowpark-notebook/Dockerfile) |
+[Docker Hub image tags](https://hub.docker.com/r/john77eipe/pyspark-snowpark-notebook/tags/)
+
+- Everything in `jupyter/scipy-notebook:python-3.8.8` and its ancestor images + pyspark libraries (most of what is listed in `jupyter/pyspark-notebook`).
 - [snowflake-snowpark-python](https://pypi.org/project/snowflake-snowpark-python/) Snowflake Snowpark Python API
 
 ### Image Relationships
@@ -200,8 +226,10 @@ communities.
 The following diagram depicts the build dependency tree of the core images. (i.e., the `FROM` statements in their Dockerfiles).
 Any given image inherits the complete content of all ancestor images pointing to it.
 
+> Note that the dotted red lines denote not direct parent relation but the fact that most of the libraries in the parent are included in the child
+
 [![Image inheritance
-diagram](../images/inherit.svg)](http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJyFzTEPgjAQBeDdX9Gws5sQjGzujsaYKxymodw17TUEjf9d6lYcur73vTttuZ8GA0_1PijF3iAJiGFSrXLsxYORZmsGHCFaeYxMEswLt_qY8k7dLGi0bRV1JInn66Wr7s3hV9UnpSFgTSyomac0yIIkZkNmBpuhfZZc6I1bM5UnyQhSYD9aXgpwAIEtReqx-NgXbrk1OPBTQQXi5Y_tpwmCtfX-4OcLCnqSGQ)
+diagram](../images/inherit.svg)](http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJyVkUFrwzAMhe_9FSa9Nof1skLpWG-971hKkWNlM1GsYCuUbPS_N94Yw0lKuqOePr2HeJq4qIyFd_W1UIq9RScglp3aqYa9eLCy7TcGS2hJziU7CfYT-_Um6nt1JNBIu6zVrZP29e2wz07bxfcqf1EaAuaOBTVzFQ8SIRK1dbYGSqChFrlQ2KZLqFSJjKAL7EviywxoQKBX0RU4G-xnvJouNOCrhBpqkQOifEyO_YLjywPYb8QkPpV_9-AYpKPYqIHwgWalCib2_Zwtn-Fpvdax0InmgniEmqz8OZVMBs3pzmNj_rHk8WFqN_vSj8sQ-r_J9Qa1zByX)
 
 ### Builds
 

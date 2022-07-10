@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg viewBox="0 0 832 520" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 1216 520" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs id="defs_block">
     <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
       <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
@@ -16,8 +16,11 @@
   <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="67" y="366" />
   <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="259" y="366" />
   <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="366" />
-  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="366" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="835" y="366" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="1027" y="366" />
   <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="446" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="446" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="835" y="446" />
   <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="40" />
   <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="44" x="128" y="64">ubuntu@SHA</text>
   <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="64" y="120" />
@@ -34,34 +37,62 @@
   <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="88" x="320" y="384">datascience-notebook</text>
   <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="360" />
   <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="71" x="512" y="384">pyspark-notebook</text>
-  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="360" />
-  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="75" x="704" y="384">snowpark-notebook</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="832" y="360" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="75" x="896" y="384">snowpark-notebook</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="1024" y="360" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="80" x="1088" y="384">streamlit-notebook</text>
   <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="440" />
   <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="80" x="512" y="464">all-spark-notebook</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="440" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="111" x="704" y="464">pyspark-snowpark-notebook</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="832" y="440" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="8" font-style="normal" font-weight="normal" text-anchor="middle" textLength="124" x="896" y="464">streamlit--snowpark-notebook</text>
   <path d="M 128 80 L 128 112" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="128,119 124,112 132,112 128,119" stroke="rgb(0,0,0)" />
   <path d="M 128 160 L 128 192" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="128,199 124,192 132,192 128,199" stroke="rgb(0,0,0)" />
+  <path d="M 128 160 L 128 180" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 180 L 1088 180" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1088 180 L 1088 352" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1088,359 1084,352 1092,352 1088,359" stroke="rgb(0,0,0)" />
   <path d="M 128 240 L 128 272" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="128,279 124,272 132,272 128,279" stroke="rgb(0,0,0)" />
   <path d="M 128 240 L 128 260" fill="none" stroke="rgb(0,0,0)" />
   <path d="M 128 260 L 320 260" fill="none" stroke="rgb(0,0,0)" />
   <path d="M 320 260 L 320 272" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="320,279 316,272 324,272 320,279" stroke="rgb(0,0,0)" />
-  <path d="M 128 320 L 128 340" fill="none" stroke="rgb(0,0,0)" />
-  <path d="M 128 340 L 704 340" fill="none" stroke="rgb(0,0,0)" />
-  <path d="M 704 340 L 704 352" fill="none" stroke="rgb(0,0,0)" />
-  <polygon fill="rgb(0,0,0)" points="704,359 700,352 708,352 704,359" stroke="rgb(0,0,0)" />
+  <path d="M 128 320 L 128 340" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <path d="M 128 340 L 1088 340" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <path d="M 1088 340 L 1088 352" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <polygon fill="rgb(122,18,43)" points="1088,359 1084,352 1092,352 1088,359" stroke="rgb(122,18,43)" />
   <path d="M 128 320 L 128 352" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="128,359 124,352 132,352 128,359" stroke="rgb(0,0,0)" />
   <path d="M 128 320 L 128 340" fill="none" stroke="rgb(0,0,0)" />
-  <path d="M 128 340 L 320 340" fill="none" stroke="rgb(0,0,0)" />
-  <path d="M 320 340 L 320 352" fill="none" stroke="rgb(0,0,0)" />
-  <polygon fill="rgb(0,0,0)" points="320,359 316,352 324,352 320,359" stroke="rgb(0,0,0)" />
+  <path d="M 128 340 L 704 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 704 340 L 704 432" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="704,439 700,432 708,432 704,439" stroke="rgb(0,0,0)" />
+  <path d="M 128 320 L 128 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 340 L 896 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 896 340 L 896 352" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="896,359 892,352 900,352 896,359" stroke="rgb(0,0,0)" />
   <path d="M 128 320 L 128 340" fill="none" stroke="rgb(0,0,0)" />
   <path d="M 128 340 L 512 340" fill="none" stroke="rgb(0,0,0)" />
   <path d="M 512 340 L 512 352" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="512,359 508,352 516,352 512,359" stroke="rgb(0,0,0)" />
+  <path d="M 128 320 L 128 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 128 340 L 320 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 320 340 L 320 352" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="320,359 316,352 324,352 320,359" stroke="rgb(0,0,0)" />
   <path d="M 512 400 L 512 432" fill="none" stroke="rgb(0,0,0)" />
   <polygon fill="rgb(0,0,0)" points="512,439 508,432 516,432 512,439" stroke="rgb(0,0,0)" />
+  <path d="M 512 400 L 512 420" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <path d="M 512 420 L 704 420" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <path d="M 704 420 L 704 432" fill="none" stroke="rgb(122,18,43)" stroke-dasharray="4" />
+  <polygon fill="rgb(122,18,43)" points="704,439 700,432 708,432 704,439" stroke="rgb(122,18,43)" />
+  <path d="M 896 400 L 896 432" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="896,439 892,432 900,432 896,439" stroke="rgb(0,0,0)" />
+  <path d="M 1088 400 L 1088 420" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <path d="M 896 420 L 1088 420" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <path d="M 896 420 L 896 432" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="4" />
+  <polygon fill="rgb(0,0,0)" points="896,439 892,432 900,432 896,439" stroke="rgb(0,0,0)" />
 </svg>

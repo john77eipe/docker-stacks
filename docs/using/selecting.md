@@ -226,10 +226,9 @@ communities.
 The following diagram depicts the build dependency tree of the core images. (i.e., the `FROM` statements in their Dockerfiles).
 Any given image inherits the complete content of all ancestor images pointing to it.
 
-> Note that the dotted red lines denote not direct parent relation but the fact that most of the libraries in the parent are included in the child
+> Note that the dotted red lines denote indirect parent relation i.e. most of the libraries in the parent are included in the child
 
-[![Image inheritance
-diagram](../images/inherit.svg)](http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJyVkUFrwzAMhe_9FSa9Nof1skLpWG-971hKkWNlM1GsYCuUbPS_N94Yw0lKuqOePr2HeJq4qIyFd_W1UIq9RScglp3aqYa9eLCy7TcGS2hJziU7CfYT-_Um6nt1JNBIu6zVrZP29e2wz07bxfcqf1EaAuaOBTVzFQ8SIRK1dbYGSqChFrlQ2KZLqFSJjKAL7EviywxoQKBX0RU4G-xnvJouNOCrhBpqkQOifEyO_YLjywPYb8QkPpV_9-AYpKPYqIHwgWalCib2_Zwtn-Fpvdax0InmgniEmqz8OZVMBs3pzmNj_rHk8WFqN_vSj8sQ-r_J9Qa1zByX)
+[![Image inheritance diagram](../images/inherit.svg)](http://interactive.blockdiag.com/image?compression=deflate&encoding=base64&src=eJyVkUFrwzAMhe_9FSa9Nof1skLpWG-971hKkWNlM1GsYCuUbPS_N94Yw0lKuqOePr2HeJq4qIyFd_W1UIq9RScglp3aqYa9eLCy7TcGS2hJziU7CfYT-_Um6nt1JNBIu6zVrZP29e2wz07bxfcqf1EaAuaOBTVzFQ8SIRK1dbYGSqChFrlQ2KZLqFSJjKAL7EviywxoQKBX0RU4G-xnvJouNOCrhBpqkQOifEyO_YLjywPYb8QkPpV_9-AYpKPYqIHwgWalCib2_Zwtn-Fpvdax0InmgniEmqz8OZVMBs3pzmNj_rHk8WFqN_vSj8sQ-r_J9Qa1zByX)
 
 ### Builds
 

@@ -18,6 +18,15 @@ ALL_IMAGES:= \
 	pyspark-notebook \
 	all-spark-notebook
 
+AARCH64_IMAGES:= \
+	base-notebook \
+	minimal-notebook \
+	r-notebook \
+	scipy-notebook \
+	datascience-notebook \
+	pyspark-notebook \
+	all-spark-notebook
+
 # Enable BuildKit for Docker build
 export DOCKER_BUILDKIT:=1
 
@@ -35,12 +44,11 @@ help:
 
 build/%: DOCKER_BUILD_ARGS?=
 build/%: ## build the latest image for a stack using the system's architecture
-	@echo "::group::Build $(OWNER)/$(notdir $@) (system's architecture)"
 	docker build $(DOCKER_BUILD_ARGS) --rm --force-rm -t $(OWNER)/$(notdir $@):latest ./$(notdir $@) --build-arg OWNER=$(OWNER)
 	@echo -n "Built image size: "
 	@docker images $(OWNER)/$(notdir $@):latest --format "{{.Size}}"
-	@echo "::endgroup::"
 build-all: $(foreach I, $(ALL_IMAGES), build/$(I)) ## build all stacks
+build-aarch64: $(foreach I, $(AARCH64_IMAGES), build/$(I)) ## build aarch64 stacks
 
 
 check-outdated/%: ## check the outdated mamba/conda packages in a stack and produce a report (experimental)
@@ -67,10 +75,9 @@ linkcheck-docs: ## check broken links
 
 
 
-hook/%: WIKI_PATH?=wiki
 hook/%: ## run post-build hooks for an image
 	python3 -m tagging.tag_image --short-image-name "$(notdir $@)" --owner "$(OWNER)" && \
-	python3 -m tagging.write_manifest --short-image-name "$(notdir $@)" --owner "$(OWNER)" --wiki-path "$(WIKI_PATH)"
+	python3 -m tagging.write_manifest --short-image-name "$(notdir $@)" --hist-line-dir /tmp/hist_lines/ --manifest-dir /tmp/manifests/ --owner "$(OWNER)"
 hook-all: $(foreach I, $(ALL_IMAGES), hook/$(I)) ## run post-build hooks for all images
 
 
@@ -102,9 +109,7 @@ pull-all: $(foreach I, $(ALL_IMAGES), pull/$(I)) ## pull all images
 
 
 push/%: ## push all tags for a jupyter image
-	@echo "::group::Push $(OWNER)/$(notdir $@) (system's architecture)"
 	docker push --all-tags $(OWNER)/$(notdir $@)
-	@echo "::endgroup::"
 push-all: $(foreach I, $(ALL_IMAGES), push/$(I)) ## push all tagged images
 
 
@@ -118,7 +123,5 @@ run-sudo-shell/%: ## run a bash in interactive mode as root in a stack
 
 
 test/%: ## run tests against a stack
-	@echo "::group::test/$(OWNER)/$(notdir $@)"
 	python3 -m tests.run_tests --short-image-name "$(notdir $@)" --owner "$(OWNER)"
-	@echo "::endgroup::"
 test-all: $(foreach I, $(ALL_IMAGES), test/$(I)) ## test all stacks

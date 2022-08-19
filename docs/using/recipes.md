@@ -29,7 +29,7 @@ Create a new Dockerfile like the one shown below.
 
 ```dockerfile
 # Start from a core stack version
-FROM jupyter/datascience-notebook:807999a41207
+FROM jupyter/datascience-notebook:0fd03d9356de
 # Install in the default python3 environment
 RUN pip install --quiet --no-cache-dir 'flake8==3.9.2' && \
     fix-permissions "${CONDA_DIR}" && \
@@ -48,7 +48,7 @@ Next, create a new Dockerfile like the one shown below.
 
 ```dockerfile
 # Start from a core stack version
-FROM jupyter/datascience-notebook:807999a41207
+FROM jupyter/datascience-notebook:0fd03d9356de
 # Install from requirements.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/
 RUN pip install --quiet --no-cache-dir --requirement /tmp/requirements.txt && \
@@ -60,7 +60,7 @@ For conda, the Dockerfile is similar:
 
 ```dockerfile
 # Start from a core stack version
-FROM jupyter/datascience-notebook:807999a41207
+FROM jupyter/datascience-notebook:0fd03d9356de
 # Install from requirements.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/
 RUN mamba install --yes --file /tmp/requirements.txt && \
@@ -233,14 +233,15 @@ RUN rm /etc/dpkg/dpkg.cfg.d/excludes && \
 USER ${NB_UID}
 ```
 
-Adding the documentation on top of the existing single-user image wastes a lot of space and requires
-reinstalling every system package. Which can take additional time and bandwidth; the
-`datascience-notebook` image has been shown to grow by almost 3GB when adding manpages in this way.
+Adding the documentation on top of the existing single-user image wastes a lot of space
+and requires reinstalling every system package,
+which can take additional time and bandwidth.
+The `datascience-notebook` image has been shown to grow by almost 3GB when adding manpages in this way.
 Enabling manpages in the base Ubuntu layer prevents this container bloat.
-To achieve this, use the previous `Dockerfile` with the original ubuntu image (`ubuntu:focal`) as your base container:
+To achieve this, use the previous `Dockerfile`'s commands with the original `ubuntu` image as your base container:
 
 ```dockerfile
-ARG BASE_CONTAINER=ubuntu:focal
+ARG BASE_CONTAINER=ubuntu:22.04
 ```
 
 For Ubuntu 18.04 (bionic) and earlier, you may also require to a workaround for a mandb bug, which was fixed in mandb >= 2.8.6.1:
@@ -282,7 +283,7 @@ To use a specific version of JupyterHub, the version of `jupyterhub` in your ima
 version in the Hub itself.
 
 ```dockerfile
-FROM jupyter/base-notebook:807999a41207
+FROM jupyter/base-notebook:0fd03d9356de
 RUN pip install --quiet --no-cache-dir jupyterhub==1.4.1 && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
@@ -473,7 +474,7 @@ For JupyterLab:
 
 ```bash
 docker run -it --rm \
-    jupyter/base-notebook:807999a41207 \
+    jupyter/base-notebook:0fd03d9356de \
     start.sh jupyter lab --LabApp.token=''
 ```
 
@@ -481,7 +482,7 @@ For jupyter classic:
 
 ```bash
 docker run -it --rm \
-    jupyter/base-notebook:807999a41207 \
+    jupyter/base-notebook:0fd03d9356de \
     start.sh jupyter notebook --NotebookApp.token=''
 ```
 

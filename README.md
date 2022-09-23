@@ -18,7 +18,7 @@ You can use a stack image to do any of the following (and more):
 
 You can try a [relatively recent build of the jupyter/base-notebook image on mybinder.org](https://mybinder.org/v2/gh/jupyter/docker-stacks/main?urlpath=lab/tree/README.ipynb)
 by simply clicking the preceding link.
-Otherwise, the examples below may help you get started if you [have Docker installed](https://docs.docker.com/install/),
+Otherwise, the examples below may help you get started if you [have Docker installed](https://docs.docker.com/get-docker/),
 know [which Docker image](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html) you want to use
 and want to launch a single Jupyter Server in a container.
 
@@ -115,6 +115,6 @@ This change is tracked in the issue [#1217](https://github.com/jupyter/docker-st
 
 ## CPU Architectures
 
-- We publish containers for both `amd64` (`x86_64`) and `aarch64` platforms, except for `tensorflow-notebook`, which only supports `amd64` for now
-- We do not create multi-platform images
-- Instead, all `arm64` images have _aarch64-_ tag prefix, for example `jupyter/base-notebook:aarch64-python-3.10.5`
+- We publish containers for both `x86_64` and `aarch64` platforms, except for `tensorflow-notebook`, which only supports `x86_64` for now
+- Single-platform images have either `aarch64` or `x86_64` tag prefixes, for example `jupyter/base-notebook:aarch64-python-3.10.5`
+- Starting from `2022-09-21`, we create multi-platform images
